@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Logo from './Logo'
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -36,18 +37,8 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
         {/* Logo */}
-        <a href="#home" className="group flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--gold)]/50 transition-all group-hover:border-[var(--gold)] group-hover:shadow-lg group-hover:shadow-[var(--gold)]/20">
-            <span className="font-serif text-lg text-[var(--gold)]">B</span>
-          </div>
-          <div className="hidden sm:block">
-            <h1 className="font-serif text-xl tracking-wide text-[var(--foreground)]">
-              Bel Aspect
-            </h1>
-            <p className="text-[10px] tracking-[0.3em] text-[var(--muted-foreground)]">
-              HOTEL • RESTAURANT • LOUNGE
-            </p>
-          </div>
+        <a href="#home" className="group">
+          <Logo size="sm" showText={true} />
         </a>
 
         {/* Desktop Navigation */}
