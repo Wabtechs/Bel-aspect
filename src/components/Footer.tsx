@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail } from 'lucide-react'
+import Logo from './Logo'
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
+  { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=100064926300612', label: 'Bel Aspect 1' },
+  { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=100069724359663', label: 'Bel Aspect 2' },
   { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Youtube, href: '#', label: 'YouTube' },
 ]
 
 const quickLinks = [
@@ -29,16 +29,8 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#home" className="group inline-flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[var(--gold)]/50">
-                <span className="font-serif text-xl text-[var(--gold)]">B</span>
-              </div>
-              <div>
-                <h3 className="font-serif text-xl text-[var(--foreground)]">Bel Aspect</h3>
-                <p className="text-[10px] tracking-[0.2em] text-[var(--muted-foreground)]">
-                  HOTEL • RESTAURANT • LOUNGE
-                </p>
-              </div>
+            <a href="#home" className="group inline-block">
+              <Logo size="sm" showText={true} />
             </a>
             <p className="mt-4 text-sm leading-relaxed text-[var(--muted-foreground)]">
               Experience luxury and comfort in the heart of Kinshasa. Your perfect escape awaits at Bel Aspect.
