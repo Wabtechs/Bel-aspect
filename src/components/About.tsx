@@ -2,16 +2,17 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Hotel, Utensils, Wine, Calendar, Wifi, Car, Wind, Coffee } from 'lucide-react'
+import { belAspect, belImages } from '../lib/belAspect'
 
 const features = [
-  { icon: Hotel, label: 'Luxury Rooms' },
-  { icon: Utensils, label: 'Fine Dining' },
+  { icon: Hotel, label: 'Chambres' },
+  { icon: Utensils, label: 'Restaurant' },
   { icon: Wine, label: 'Lounge Bar' },
-  { icon: Calendar, label: 'Events' },
-  { icon: Wifi, label: 'Free Wi-Fi' },
+  { icon: Calendar, label: 'Sorties' },
+  { icon: Wifi, label: 'Wi-Fi' },
   { icon: Car, label: 'Parking' },
-  { icon: Wind, label: 'Air Conditioning' },
-  { icon: Coffee, label: 'Breakfast' },
+  { icon: Wind, label: 'Climatisation' },
+  { icon: Coffee, label: 'Petit déjeuner' },
 ]
 
 export default function About() {
@@ -43,9 +44,12 @@ export default function About() {
                   className="overflow-hidden rounded-2xl"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop"
-                    alt="Hotel room"
+                    src={belImages.main}
+                    alt="Logo officiel Bel Aspect Hotel Restaurant"
                     className="h-48 w-full object-cover transition-transform duration-700 hover:scale-110"
+                    loading="lazy"
+                    width={640}
+                    height={640}
                   />
                 </motion.div>
                 <motion.div
@@ -55,9 +59,12 @@ export default function About() {
                   className="overflow-hidden rounded-2xl"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop"
-                    alt="Restaurant dining"
+                    src={belImages.second}
+                    alt="Bel Aspect Hotel Restaurant Kinshasa"
                     className="h-64 w-full object-cover transition-transform duration-700 hover:scale-110"
+                    loading="lazy"
+                    width={360}
+                    height={360}
                   />
                 </motion.div>
               </div>
@@ -69,9 +76,12 @@ export default function About() {
                   className="overflow-hidden rounded-2xl"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=2069&auto=format&fit=crop"
-                    alt="Lounge bar"
+                    src={belImages.second}
+                    alt="Identité Bel Aspect à Kinshasa"
                     className="h-64 w-full object-cover transition-transform duration-700 hover:scale-110"
+                    loading="lazy"
+                    width={360}
+                    height={360}
                   />
                 </motion.div>
                 <motion.div
@@ -81,9 +91,12 @@ export default function About() {
                   className="overflow-hidden rounded-2xl"
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?q=80&w=1974&auto=format&fit=crop"
-                    alt="Hotel exterior"
+                    src={belImages.main}
+                    alt="Bel Aspect Hotel Restaurant Lounge"
                     className="h-48 w-full object-cover transition-transform duration-700 hover:scale-110"
+                    loading="lazy"
+                    width={640}
+                    height={640}
                   />
                 </motion.div>
               </div>
@@ -96,8 +109,8 @@ export default function About() {
               transition={{ delay: 0.6, duration: 0.5 }}
               className="glass absolute -bottom-6 -right-6 rounded-2xl p-6 md:bottom-10 md:right-10"
             >
-              <p className="text-4xl font-bold text-[var(--gold)]">10+</p>
-              <p className="text-sm text-[var(--muted-foreground)]">Years of Excellence</p>
+              <p className="text-4xl font-bold text-[var(--gold)]">1 743</p>
+              <p className="text-sm text-[var(--muted-foreground)]">visites signalées</p>
             </motion.div>
           </motion.div>
 
@@ -114,7 +127,7 @@ export default function About() {
               transition={{ delay: 0.2 }}
               className="text-sm tracking-[0.3em] text-[var(--gold)]"
             >
-              DISCOVER OUR STORY
+              L'ADRESSE BEL ASPECT
             </motion.p>
             
             <motion.h2
@@ -123,8 +136,8 @@ export default function About() {
               transition={{ delay: 0.3 }}
               className="mt-4 font-serif text-4xl font-light leading-tight text-[var(--foreground)] md:text-5xl"
             >
-              A Legacy of{' '}
-              <span className="text-gradient-gold">Luxury & Comfort</span>
+              Un lieu complet à{' '}
+              <span className="text-gradient-gold">Kalamu</span>
             </motion.h2>
             
             <motion.div
@@ -140,9 +153,9 @@ export default function About() {
               transition={{ delay: 0.5 }}
               className="text-lg leading-relaxed text-[var(--muted-foreground)]"
             >
-              Located in the vibrant heart of Kalamu, Kinshasa, Bel Aspect offers an 
-              exceptional blend of affordable luxury and warm hospitality. Our hotel 
-              complex provides everything you need for a memorable stay.
+              {belAspect.name} est situé sur {belAspect.address1}. L'établissement
+              associe hébergement, restauration et lounge bar dans une ambiance simple,
+              moderne et chaleureuse au coeur de Kinshasa.
             </motion.p>
             
             <motion.p
@@ -151,8 +164,8 @@ export default function About() {
               transition={{ delay: 0.6 }}
               className="mt-4 text-lg leading-relaxed text-[var(--muted-foreground)]"
             >
-              Whether you&apos;re seeking a comfortable room, exquisite dining, or an 
-              unforgettable nightlife experience, Bel Aspect is your perfect destination.
+              Que vous veniez pour une chambre, un repas, un verre entre proches ou une
+              soirée, Bel Aspect propose une expérience pratique, accessible et vivante.
             </motion.p>
 
             {/* Features Grid */}

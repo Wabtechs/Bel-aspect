@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ChevronDown, Star, MapPin } from 'lucide-react'
+import { belAspect, belImages } from '../lib/belAspect'
 
 export default function Hero() {
   return (
@@ -7,9 +8,11 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop"
-          alt="Luxury hotel lobby"
+          src={belImages.main}
+          alt="Bel Aspect Hotel Restaurant à Kalamu"
           className="h-full w-full object-cover"
+          width={1280}
+          height={1280}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[var(--background)]" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/30" />
@@ -27,8 +30,8 @@ export default function Hero() {
             <Star className="h-6 w-6 text-[var(--gold)]" />
           </div>
           <div>
-            <p className="text-2xl font-semibold text-[var(--foreground)]">4.9</p>
-            <p className="text-xs text-[var(--muted-foreground)]">Guest Rating</p>
+            <p className="text-2xl font-semibold text-[var(--foreground)]">400+</p>
+            <p className="text-xs text-[var(--muted-foreground)]">abonnés Facebook</p>
           </div>
         </div>
       </motion.div>
@@ -45,7 +48,7 @@ export default function Hero() {
           </div>
           <div>
             <p className="text-sm font-medium text-[var(--foreground)]">Kalamu</p>
-            <p className="text-xs text-[var(--muted-foreground)]">Kinshasa, DRC</p>
+            <p className="text-xs text-[var(--muted-foreground)]">Kinshasa, RDC</p>
           </div>
         </div>
       </motion.div>
@@ -64,7 +67,7 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="mb-4 text-sm tracking-[0.4em] text-[var(--gold)]"
           >
-            WELCOME TO
+            BIENVENUE AU
           </motion.p>
           
           <motion.h1
@@ -89,7 +92,7 @@ export default function Hero() {
             transition={{ delay: 0.9 }}
             className="text-lg tracking-[0.3em] text-[var(--muted-foreground)]"
           >
-            HOTEL • RESTAURANT • LOUNGE BAR
+            {belAspect.tagline.toUpperCase()}
           </motion.p>
           
           <motion.p
@@ -98,8 +101,8 @@ export default function Hero() {
             transition={{ delay: 1 }}
             className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[var(--foreground)]/80"
           >
-            Experience luxury and comfort in the heart of Kinshasa. 
-            Your perfect escape awaits.
+            Hébergement, restauration et ambiance lounge au coeur de Kalamu.
+            Une adresse conviviale pour se poser, manger et sortir à Kinshasa.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -113,14 +116,14 @@ export default function Hero() {
               href="#contact"
               className="group relative overflow-hidden rounded-full bg-[var(--gold)] px-8 py-4 text-sm font-medium tracking-wider text-[var(--background)] transition-all hover:shadow-lg hover:shadow-[var(--gold)]/30"
             >
-              <span className="relative z-10">BOOK YOUR STAY</span>
+              <span className="relative z-10">RESERVER MAINTENANT</span>
               <div className="absolute inset-0 -translate-x-full bg-[var(--gold-light)] transition-transform group-hover:translate-x-0" />
             </a>
             <a
               href="#rooms"
               className="rounded-full border border-[var(--foreground)]/30 px-8 py-4 text-sm font-medium tracking-wider text-[var(--foreground)] transition-all hover:border-[var(--gold)] hover:text-[var(--gold)]"
             >
-              EXPLORE ROOMS
+              DECOUVRIR LES CHAMBRES
             </a>
           </motion.div>
         </motion.div>
@@ -138,7 +141,7 @@ export default function Hero() {
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center gap-2 text-[var(--muted-foreground)] transition-colors hover:text-[var(--gold)]"
           >
-            <span className="text-xs tracking-widest">SCROLL</span>
+            <span className="text-xs tracking-widest">DECOUVRIR</span>
             <ChevronDown className="h-5 w-5" />
           </motion.a>
         </motion.div>

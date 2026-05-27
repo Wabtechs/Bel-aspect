@@ -1,32 +1,33 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { belAspect } from '../lib/belAspect'
 
 const contactInfo = [
   {
     icon: MapPin,
     title: 'Bel Aspect 1',
-    content: 'Rue Tumbumani No.1, Kalamu, Kinshasa',
+    content: belAspect.address1,
   },
   {
     icon: MapPin,
     title: 'Bel Aspect 2',
-    content: 'Rue des Surveillants, Kalamu, Kinshasa',
+    content: belAspect.address2,
   },
   {
     icon: Phone,
-    title: 'Phone Numbers',
-    content: '+243 890 120 005\n+243 890 000 598\n+243 851 120 111',
+    title: 'Téléphones',
+    content: belAspect.phones.join('\n'),
   },
   {
     icon: Mail,
     title: 'Email',
-    content: 'belaspecthotel1@gmail.com',
+    content: belAspect.email,
   },
   {
     icon: Clock,
-    title: 'Reception Hours',
-    content: '24/7 Available',
+    title: 'Réception',
+    content: 'Disponible tous les jours',
   },
 ]
 
@@ -42,7 +43,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const message = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`
+    const message = `Nom: ${formData.name}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nMessage: ${formData.message}`
     const phone = '243890120005'
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank')
   }
@@ -64,7 +65,7 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="text-sm tracking-[0.3em] text-[var(--gold)]"
           >
-            GET IN TOUCH
+            CONTACT
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -72,7 +73,7 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-4 font-serif text-4xl font-light text-[var(--foreground)] md:text-5xl"
           >
-            Contact <span className="text-gradient-gold">Us</span>
+            Contactez <span className="text-gradient-gold">Bel Aspect</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scaleX: 0 }}
@@ -90,7 +91,7 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h3 className="mb-8 font-serif text-2xl text-[var(--foreground)]">
-              We&apos;d Love to Hear From You
+              Informations pratiques
             </h3>
 
             <div className="space-y-6">
@@ -130,7 +131,7 @@ export default function Contact() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Bel Aspect Location"
+                title="Localisation Bel Aspect"
                 className="grayscale"
               />
             </motion.div>
@@ -144,13 +145,13 @@ export default function Contact() {
           >
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--card)] p-8">
               <h3 className="mb-6 font-serif text-2xl text-[var(--foreground)]">
-                Send Us a Message
+                Envoyer un message
               </h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="mb-2 block text-sm text-[var(--muted-foreground)]">
-                    Full Name
+                    Nom complet
                   </label>
                   <input
                     type="text"
@@ -159,7 +160,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-[var(--foreground)] outline-none transition-colors focus:border-[var(--gold)]"
-                    placeholder="Your name"
+                    placeholder="Votre nom"
                   />
                 </div>
 
@@ -175,12 +176,12 @@ export default function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-[var(--foreground)] outline-none transition-colors focus:border-[var(--gold)]"
-                      placeholder="your@email.com"
+                      placeholder="votre@email.com"
                     />
                   </div>
                   <div>
                     <label htmlFor="phone" className="mb-2 block text-sm text-[var(--muted-foreground)]">
-                      Phone
+                      Téléphone
                     </label>
                     <input
                       type="tel"
@@ -204,7 +205,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full resize-none rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-[var(--foreground)] outline-none transition-colors focus:border-[var(--gold)]"
-                    placeholder="How can we help you?"
+                    placeholder="Votre demande de réservation ou d'information"
                   />
                 </div>
 
@@ -212,7 +213,7 @@ export default function Contact() {
                   type="submit"
                   className="group flex w-full items-center justify-center gap-2 rounded-full bg-[var(--gold)] py-4 text-sm font-medium tracking-wide text-[var(--background)] transition-all hover:bg-[var(--gold-light)]"
                 >
-                  Send via WhatsApp
+                  Envoyer via WhatsApp
                   <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </button>
               </form>

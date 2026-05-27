@@ -1,40 +1,41 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Bed, Wind, Wifi, Tv, Bath, Coffee } from 'lucide-react'
+import { belImages } from '../lib/belAspect'
 
 const rooms = [
   {
-    name: 'Standard Room',
+    name: 'Chambre Standard',
     price: 15,
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop',
-    amenities: ['Single Bed', 'Air Conditioning', 'Free Wi-Fi'],
-    description: 'Comfortable and affordable, perfect for solo travelers.',
+    image: belImages.main,
+    amenities: ['Lit simple', 'Climatisation', 'Wi-Fi'],
+    description: 'Une option pratique et accessible pour un repos rapide ou une nuit à Kalamu.',
   },
   {
-    name: 'Deluxe Room',
+    name: 'Chambre Deluxe',
     price: 20,
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1974&auto=format&fit=crop',
-    amenities: ['Double Bed', 'Air Conditioning', 'Free Wi-Fi', 'TV'],
-    description: 'Spacious room with enhanced comfort and amenities.',
+    image: belImages.second,
+    amenities: ['Lit double', 'Climatisation', 'Wi-Fi', 'TV'],
+    description: 'Plus de confort pour vos séjours courts, déplacements ou moments de détente.',
   },
   {
-    name: 'Premium Suite',
+    name: 'Chambre VIP',
     price: 25,
-    image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format&fit=crop',
-    amenities: ['King Bed', 'Air Conditioning', 'Free Wi-Fi', 'TV', 'Private Bath'],
-    description: 'Our finest accommodation with luxury touches.',
+    image: belImages.main,
+    amenities: ['Grand lit', 'Climatisation', 'Wi-Fi', 'TV', 'Douche privée'],
+    description: 'La formule la plus confortable pour profiter pleinement de Bel Aspect.',
   },
 ]
 
 const amenityIcons: Record<string, typeof Bed> = {
-  'Single Bed': Bed,
-  'Double Bed': Bed,
-  'King Bed': Bed,
-  'Air Conditioning': Wind,
-  'Free Wi-Fi': Wifi,
+  'Lit simple': Bed,
+  'Lit double': Bed,
+  'Grand lit': Bed,
+  'Climatisation': Wind,
+  'Wi-Fi': Wifi,
   'TV': Tv,
-  'Private Bath': Bath,
-  'Breakfast': Coffee,
+  'Douche privée': Bath,
+  'Petit déjeuner': Coffee,
 }
 
 export default function Rooms() {
@@ -42,7 +43,7 @@ export default function Rooms() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   const handleWhatsAppBooking = (roomName: string) => {
-    const message = `Hello! I would like to book a ${roomName} at Bel Aspect Hotel.`
+    const message = `Bonjour, je souhaite réserver ${roomName} au Bel Aspect Hotel - Restaurant.`
     const phone = '243890120005'
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank')
   }
@@ -62,7 +63,7 @@ export default function Rooms() {
             transition={{ duration: 0.5 }}
             className="text-sm tracking-[0.3em] text-[var(--gold)]"
           >
-            ACCOMMODATION
+            HEBERGEMENT
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -70,7 +71,7 @@ export default function Rooms() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-4 font-serif text-4xl font-light text-[var(--foreground)] md:text-5xl"
           >
-            Our <span className="text-gradient-gold">Luxury Rooms</span>
+            Nos <span className="text-gradient-gold">chambres</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scaleX: 0 }}
@@ -84,8 +85,8 @@ export default function Rooms() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mx-auto mt-6 max-w-2xl text-[var(--muted-foreground)]"
           >
-            Choose from our selection of comfortable rooms, each designed to provide 
-            you with a restful and memorable stay.
+            Des formules simples et accessibles, avec des tarifs clairs pour se reposer
+            ou passer la nuit à Kalamu.
           </motion.p>
         </div>
 
@@ -99,29 +100,29 @@ export default function Rooms() {
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div>
               <span className="rounded-full bg-[var(--gold)]/20 px-3 py-1 text-xs font-medium text-[var(--gold)]">
-                SPECIAL OFFER
+                OFFRE REPOS
               </span>
               <h3 className="mt-3 font-serif text-2xl text-[var(--foreground)]">
-                Day Rest Package
+                Formule repos en journée
               </h3>
               <p className="mt-2 text-[var(--muted-foreground)]">
-                Need a quick rest? Enjoy our rooms for a few hours at an affordable rate.
+                Besoin d'une pause rapide ? Profitez d'une chambre pour quelques heures.
               </p>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-sm text-[var(--muted-foreground)]">Starting from</p>
+              <p className="text-sm text-[var(--muted-foreground)]">A partir de</p>
               <p className="font-serif text-4xl text-[var(--gold)]">$15</p>
               <button
-                onClick={() => handleWhatsAppBooking('Day Rest Package')}
+                onClick={() => handleWhatsAppBooking('la formule repos en journée')}
                 className="mt-3 rounded-full bg-[var(--gold)] px-6 py-2 text-sm font-medium text-[var(--background)] transition-all hover:bg-[var(--gold-light)]"
               >
-                Book Now
+                Réserver
               </button>
             </div>
           </div>
         </motion.div>
 
-        {/* Rooms Grid */}
+        {/* Grille des chambres */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {rooms.map((room, index) => (
             <motion.div
@@ -133,17 +134,20 @@ export default function Rooms() {
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
-                <img
-                  src={room.image}
-                  alt={room.name}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                  <img
+                    src={room.image}
+                    alt={room.name}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                    width={640}
+                    height={640}
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 
                 {/* Price Badge */}
                 <div className="absolute right-4 top-4 rounded-full bg-[var(--gold)] px-4 py-2">
                   <span className="text-lg font-bold text-[var(--background)]">${room.price}</span>
-                  <span className="text-xs text-[var(--background)]/80">/night</span>
+                  <span className="text-xs text-[var(--background)]/80">/nuit</span>
                 </div>
               </div>
 
@@ -168,12 +172,12 @@ export default function Rooms() {
                   })}
                 </div>
 
-                {/* Book Button */}
+                {/* Bouton de réservation */}
                 <button
                   onClick={() => handleWhatsAppBooking(room.name)}
                   className="mt-6 w-full rounded-full border border-[var(--gold)] bg-[var(--gold)]/10 py-3 text-sm font-medium tracking-wide text-[var(--gold)] transition-all hover:bg-[var(--gold)] hover:text-[var(--background)]"
                 >
-                  Reserve via WhatsApp
+                  Réserver via WhatsApp
                 </button>
               </div>
             </motion.div>

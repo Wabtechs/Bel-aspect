@@ -7,7 +7,7 @@ export default function WhatsAppButton() {
 
   const handleWhatsApp = () => {
     const phone = '243890120005'
-    const message = 'Hello! I would like to make a reservation at Bel Aspect Hotel.'
+    const message = 'Bonjour, je souhaite faire une réservation au Bel Aspect Hotel - Restaurant.'
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank')
   }
 
@@ -34,19 +34,19 @@ export default function WhatsAppButton() {
               </div>
               <div>
                 <p className="font-medium text-[var(--foreground)]">Bel Aspect</p>
-                <p className="text-xs text-green-500">Online Now</p>
+                <p className="text-xs text-green-500">Disponible maintenant</p>
               </div>
             </div>
             
             <p className="mt-4 text-sm text-[var(--muted-foreground)]">
-              Hi there! How can we help you? Click below to chat with us on WhatsApp.
+              Bonjour. Cliquez ci-dessous pour contacter Bel Aspect directement sur WhatsApp.
             </p>
             
             <button
               onClick={handleWhatsApp}
               className="mt-4 w-full rounded-full bg-green-500 py-3 text-sm font-medium text-white transition-all hover:bg-green-600"
             >
-              Start Conversation
+              Démarrer la conversation
             </button>
           </motion.div>
         )}
@@ -57,7 +57,7 @@ export default function WhatsAppButton() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         className="relative flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg shadow-green-500/30 transition-all hover:bg-green-600"
-        aria-label="Open WhatsApp chat"
+        aria-label="Ouvrir le chat WhatsApp"
       >
         {isOpen ? (
           <X className="h-6 w-6" />

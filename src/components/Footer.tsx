@@ -1,19 +1,20 @@
 import { motion } from 'framer-motion'
-import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail } from 'lucide-react'
+import { Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react'
 import Logo from './Logo'
+import { belAspect } from '../lib/belAspect'
 
 const socialLinks = [
-  { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=100064926300612', label: 'Bel Aspect 1' },
-  { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=100069724359663', label: 'Bel Aspect 2' },
+  { icon: Facebook, href: belAspect.facebook1, label: 'Bel Aspect 1' },
+  { icon: Facebook, href: belAspect.facebook2, label: 'Bel Aspect 2' },
   { icon: Instagram, href: '#', label: 'Instagram' },
 ]
 
 const quickLinks = [
-  { name: 'About Us', href: '#about' },
-  { name: 'Our Rooms', href: '#rooms' },
+  { name: 'À propos', href: '#about' },
+  { name: 'Chambres', href: '#rooms' },
   { name: 'Restaurant', href: '#restaurant' },
   { name: 'Lounge Bar', href: '#lounge' },
-  { name: 'Gallery', href: '#gallery' },
+  { name: 'Galerie', href: '#gallery' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -33,7 +34,8 @@ export default function Footer() {
               <Logo size="sm" showText={true} />
             </a>
             <p className="mt-4 text-sm leading-relaxed text-[var(--muted-foreground)]">
-              Experience luxury and comfort in the heart of Kinshasa. Your perfect escape awaits at Bel Aspect.
+              Hôtel, restaurant et lounge bar à Kalamu, Kinshasa. Un lieu pratique
+              pour se reposer, manger et profiter de la soirée.
             </p>
             
             {/* Social Links */}
@@ -56,7 +58,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="mb-4 text-sm font-medium tracking-wider text-[var(--foreground)]">
-              QUICK LINKS
+              NAVIGATION
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
@@ -81,19 +83,19 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[var(--gold)]" />
                 <span className="text-sm text-[var(--muted-foreground)]">
-                  Rue Tumbumani No.1, Kalamu, Kinshasa
+                  {belAspect.address1}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[var(--gold)]" />
                 <span className="text-sm text-[var(--muted-foreground)]">
-                  +243 890 120 005
+                  {belAspect.phone}
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-[var(--gold)]" />
                 <span className="text-sm text-[var(--muted-foreground)]">
-                  belaspecthotel1@gmail.com
+                  {belAspect.email}
                 </span>
               </li>
             </ul>
@@ -102,22 +104,22 @@ export default function Footer() {
           {/* Newsletter */}
           <div>
             <h4 className="mb-4 text-sm font-medium tracking-wider text-[var(--foreground)]">
-              STAY UPDATED
+              RESERVATION
             </h4>
             <p className="text-sm text-[var(--muted-foreground)]">
-              Subscribe to receive special offers and updates.
+              Laissez votre email ou contactez-nous directement sur WhatsApp.
             </p>
             <form className="mt-4 flex gap-2">
               <input
                 type="email"
-                placeholder="Your email"
+                placeholder="Votre email"
                 className="w-full rounded-full border border-[var(--border)] bg-[var(--background)] px-4 py-2 text-sm text-[var(--foreground)] outline-none transition-colors focus:border-[var(--gold)]"
               />
               <button
                 type="submit"
                 className="rounded-full bg-[var(--gold)] px-4 py-2 text-sm font-medium text-[var(--background)] transition-all hover:bg-[var(--gold-light)]"
               >
-                Join
+                Envoyer
               </button>
             </form>
           </div>
@@ -126,14 +128,14 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[var(--border)] pt-8 md:flex-row">
           <p className="text-center text-sm text-[var(--muted-foreground)]">
-            &copy; {new Date().getFullYear()} Bel Aspect Hotel. All rights reserved.
+            &copy; {new Date().getFullYear()} Bel Aspect Hotel - Restaurant. Tous droits réservés.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-sm text-[var(--muted-foreground)] hover:text-[var(--gold)]">
-              Privacy Policy
+              Confidentialité
             </a>
             <a href="#" className="text-sm text-[var(--muted-foreground)] hover:text-[var(--gold)]">
-              Terms of Service
+              Conditions
             </a>
           </div>
         </div>

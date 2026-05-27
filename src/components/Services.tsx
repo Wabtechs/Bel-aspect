@@ -1,31 +1,32 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Hotel, Utensils, Wine, PartyPopper } from 'lucide-react'
+import { belImages } from '../lib/belAspect'
 
 const services = [
   {
     icon: Hotel,
-    title: 'Hotel',
-    description: 'Experience comfort in our well-appointed rooms with modern amenities and personalized service.',
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop',
+    title: 'Hôtel',
+    description: 'Des chambres accessibles pour se reposer à Kalamu, avec climatisation, Wi-Fi et accueil disponible.',
+    image: belImages.main,
   },
   {
     icon: Utensils,
     title: 'Restaurant',
-    description: 'Savor exquisite local and international cuisine prepared by our talented culinary team.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop',
+    description: 'Une restauration conviviale pour vos repas, rendez-vous et moments en famille ou entre amis.',
+    image: belImages.second,
   },
   {
     icon: Wine,
     title: 'Lounge Bar',
-    description: 'Unwind with premium cocktails and fine spirits in our sophisticated lounge atmosphere.',
-    image: 'https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=2074&auto=format&fit=crop',
+    description: 'Cocktails, boissons et ambiance lounge pour profiter des soirées à Kinshasa.',
+    image: belImages.main,
   },
   {
     icon: PartyPopper,
-    title: 'Events',
-    description: 'Host memorable celebrations and gatherings in our versatile event spaces.',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop',
+    title: 'Ambiance',
+    description: 'Un cadre vivant pour vos sorties, célébrations et rencontres dans la commune de Kalamu.',
+    image: belImages.second,
   },
 ]
 
@@ -48,7 +49,7 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="text-sm tracking-[0.3em] text-[var(--gold)]"
           >
-            WHAT WE OFFER
+            NOS SERVICES
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -56,7 +57,7 @@ export default function Services() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-4 font-serif text-4xl font-light text-[var(--foreground)] md:text-5xl"
           >
-            Our <span className="text-gradient-gold">Premium Services</span>
+            L'expérience <span className="text-gradient-gold">Bel Aspect</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scaleX: 0 }}
@@ -78,11 +79,14 @@ export default function Services() {
             >
               {/* Background Image */}
               <div className="absolute inset-0">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                    width={640}
+                    height={640}
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
               </div>
 

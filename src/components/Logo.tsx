@@ -117,7 +117,7 @@ export default function Logo({ size = 'md', showText = true, className = '' }: L
             Bel Aspect
           </h1>
           <p className="text-[10px] tracking-[0.2em] text-[var(--muted-foreground)]">
-            HOTEL • RESTAURANT • LOUNGE
+            HOTEL - RESTAURANT - LOUNGE
           </p>
         </div>
       )}

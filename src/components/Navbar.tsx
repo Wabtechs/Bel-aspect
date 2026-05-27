@@ -4,13 +4,13 @@ import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
+  { name: 'Accueil', href: '#home' },
+  { name: 'À propos', href: '#about' },
   { name: 'Services', href: '#services' },
-  { name: 'Rooms', href: '#rooms' },
+  { name: 'Chambres', href: '#rooms' },
   { name: 'Restaurant', href: '#restaurant' },
   { name: 'Lounge', href: '#lounge' },
-  { name: 'Gallery', href: '#gallery' },
+  { name: 'Galerie', href: '#gallery' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -55,13 +55,13 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Book Now Button */}
+        {/* CTA réservation */}
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href="#contact"
             className="rounded-full border border-[var(--gold)] bg-[var(--gold)]/10 px-6 py-2 text-sm font-medium tracking-wide text-[var(--gold)] transition-all hover:bg-[var(--gold)] hover:text-[var(--background)]"
           >
-            Book Now
+            Réserver
           </a>
         </div>
 
@@ -106,7 +106,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-2 rounded-full border border-[var(--gold)] bg-[var(--gold)]/10 px-6 py-3 text-center text-sm font-medium tracking-wide text-[var(--gold)] transition-all hover:bg-[var(--gold)] hover:text-[var(--background)]"
               >
-                Book Now
+                Réserver
               </a>
             </div>
           </motion.div>

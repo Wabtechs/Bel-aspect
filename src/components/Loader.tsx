@@ -28,7 +28,7 @@ export default function Loader() {
           transition={{ delay: 0.5 }}
           className="mt-2 text-sm tracking-widest text-[var(--muted-foreground)]"
         >
-          HOTEL • RESTAURANT • LOUNGE
+          HOTEL - RESTAURANT - LOUNGE
         </motion.p>
       </motion.div>
     </div>
