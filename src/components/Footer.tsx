@@ -98,6 +98,17 @@ export default function Footer() {
                   {belAspect.email}
                 </span>
               </li>
+              <li className="flex items-start gap-3">
+                <Facebook className="mt-0.5 h-4 w-4 shrink-0 text-[var(--gold)]" />
+                <div className="flex flex-col gap-1">
+                  <a href={belAspect.facebook1} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--muted-foreground)] transition-colors hover:text-[var(--gold)]">
+                    Facebook - Bel Aspect
+                  </a>
+                  <a href={belAspect.facebook2} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--muted-foreground)] transition-colors hover:text-[var(--gold)]">
+                    Facebook - Bel Aspect 2
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
 
