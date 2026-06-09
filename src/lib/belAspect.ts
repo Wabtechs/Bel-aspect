@@ -13,9 +13,10 @@ export const belAspect = {
 
 export const belImages = {
   hero: '/assets/img-01.jpg',
+  logo: '/assets/logo.png',
   about: ['/assets/img-02.jpg', '/assets/img-03.jpg', '/assets/img-04.jpg', '/assets/img-05.jpg'],
   services: ['/assets/img-06.jpg', '/assets/img-07.jpg', '/assets/img-08.jpg', '/assets/img-09.jpg'],
-  rooms: ['/assets/img-10.jpg', '/assets/img-11.jpg', '/assets/img-12.jpg'],
+  rooms: ['/assets/room-01.jpg', '/assets/room-02.jpg', '/assets/room-01.jpg'],
   restaurant: {
     bg: '/assets/img-13.jpg',
     cards: ['/assets/img-14.jpg', '/assets/img-15.jpg', '/assets/img-16.jpg', '/assets/img-17.jpg'],
