@@ -13,16 +13,17 @@ export default function Loader() {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-          className="mx-auto mb-6 h-16 w-16 rounded-full border-2 border-[var(--gold)] border-t-transparent"
-        />
-        <motion.img
-          src={belImages.logo}
-          alt="Bel Aspect Logo"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-          className="mx-auto mb-4 h-24 w-24 rounded-full border-2 border-[var(--gold)]/60 object-cover"
-        />
+          className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-[var(--gold)] border-t-transparent"
+        >
+          <motion.img
+            src={belImages.logo}
+            alt="Bel Aspect Logo"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+            className="h-20 w-20 rounded-full object-cover"
+          />
+        </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
