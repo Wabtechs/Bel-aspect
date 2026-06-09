@@ -12,6 +12,18 @@ export const belAspect = {
 }
 
 export const belImages = {
-  main: '/assets/bel-aspect-hotel-restaurant.jpg',
-  second: '/assets/bel-aspect-kinshasa.jpg',
+  hero: '/assets/img-01.jpg',
+  about: ['/assets/img-02.jpg', '/assets/img-03.jpg', '/assets/img-04.jpg', '/assets/img-05.jpg'],
+  services: ['/assets/img-06.jpg', '/assets/img-07.jpg', '/assets/img-08.jpg', '/assets/img-09.jpg'],
+  rooms: ['/assets/img-10.jpg', '/assets/img-11.jpg', '/assets/img-12.jpg'],
+  restaurant: {
+    bg: '/assets/img-13.jpg',
+    cards: ['/assets/img-14.jpg', '/assets/img-15.jpg', '/assets/img-16.jpg', '/assets/img-17.jpg'],
+  },
+  lounge: ['/assets/img-18.jpg', '/assets/img-19.jpg'],
+  gallery: [
+    '/assets/img-20.jpg', '/assets/img-21.jpg', '/assets/img-22.jpg', '/assets/img-23.jpg',
+    '/assets/img-24.jpg', '/assets/img-25.jpg', '/assets/img-26.jpg', '/assets/img-27.jpg',
+  ],
+  testimonials: ['/assets/img-28.jpg', '/assets/img-29.jpg', '/assets/img-01.jpg'],
 }

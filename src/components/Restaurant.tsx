@@ -7,22 +7,22 @@ const menuHighlights = [
   {
     name: 'Cuisine locale',
     description: 'Des plats congolais et des classiques appréciés au quotidien',
-    image: belImages.second,
+    image: belImages.restaurant.cards[0],
   },
   {
     name: 'Repas entre proches',
     description: 'Un cadre pratique pour déjeuner, dîner ou recevoir',
-    image: belImages.main,
+    image: belImages.restaurant.cards[1],
   },
   {
     name: 'Petit déjeuner',
     description: 'Une option utile pour bien commencer la journée',
-    image: belImages.second,
+    image: belImages.restaurant.cards[2],
   },
   {
     name: 'Boissons et cocktails',
     description: 'A savourer au restaurant ou côté lounge bar',
-    image: belImages.main,
+    image: belImages.restaurant.cards[3],
   },
 ]
 
@@ -34,7 +34,7 @@ export default function Restaurant() {
     <section id="restaurant" className="relative overflow-hidden bg-[var(--card)] py-24 lg:py-32">
       <div className="absolute inset-0 opacity-30">
         <img
-          src={belImages.main}
+          src={belImages.restaurant.bg}
           alt="Bel Aspect Hotel Restaurant"
           className="h-full w-full object-cover"
           loading="lazy"

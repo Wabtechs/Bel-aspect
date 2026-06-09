@@ -8,25 +8,25 @@ const services = [
     icon: Hotel,
     title: 'Hôtel',
     description: 'Des chambres accessibles pour se reposer à Kalamu, avec climatisation, Wi-Fi et accueil disponible.',
-    image: belImages.main,
+    image: belImages.services[0],
   },
   {
     icon: Utensils,
     title: 'Restaurant',
     description: 'Une restauration conviviale pour vos repas, rendez-vous et moments en famille ou entre amis.',
-    image: belImages.second,
+    image: belImages.services[1],
   },
   {
     icon: Wine,
     title: 'Lounge Bar',
     description: 'Cocktails, boissons et ambiance lounge pour profiter des soirées à Kinshasa.',
-    image: belImages.main,
+    image: belImages.services[2],
   },
   {
     icon: PartyPopper,
     title: 'Ambiance',
     description: 'Un cadre vivant pour vos sorties, célébrations et rencontres dans la commune de Kalamu.',
-    image: belImages.second,
+    image: belImages.services[3],
   },
 ]
 

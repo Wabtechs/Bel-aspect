@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
+import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
   { name: 'Accueil', href: '#home' },
@@ -55,8 +56,9 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA réservation */}
-        <div className="hidden items-center gap-4 lg:flex">
+        {/* Theme toggle + CTA réservation */}
+        <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <a
             href="#contact"
             className="rounded-full border border-[var(--gold)] bg-[var(--gold)]/10 px-6 py-2 text-sm font-medium tracking-wide text-[var(--gold)] transition-all hover:bg-[var(--gold)] hover:text-[var(--background)]"

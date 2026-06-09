@@ -4,14 +4,14 @@ import { X } from 'lucide-react'
 import { belImages } from '../lib/belAspect'
 
 const galleryImages = [
-  { src: belImages.main, alt: 'Bel Aspect Hotel Restaurant', category: 'Hôtel' },
-  { src: belImages.second, alt: 'Bel Aspect Kinshasa', category: 'Restaurant' },
-  { src: belImages.main, alt: 'Identité Bel Aspect', category: 'Restaurant' },
-  { src: belImages.second, alt: 'Bel Aspect Lounge Bar', category: 'Lounge' },
-  { src: belImages.main, alt: 'Bel Aspect Hotel à Kalamu', category: 'Chambres' },
-  { src: belImages.second, alt: 'Bel Aspect Hotel Restaurant Kinshasa', category: 'Ambiance' },
-  { src: belImages.main, alt: 'Bel Aspect Lounge', category: 'Lounge' },
-  { src: belImages.second, alt: 'Bel Aspect Restaurant', category: 'Sorties' },
+  { src: belImages.gallery[0], alt: 'Bel Aspect Hotel Restaurant', category: 'Hôtel' },
+  { src: belImages.gallery[1], alt: 'Bel Aspect Kinshasa', category: 'Restaurant' },
+  { src: belImages.gallery[2], alt: 'Identité Bel Aspect', category: 'Restaurant' },
+  { src: belImages.gallery[3], alt: 'Bel Aspect Lounge Bar', category: 'Lounge' },
+  { src: belImages.gallery[4], alt: 'Bel Aspect Hotel à Kalamu', category: 'Chambres' },
+  { src: belImages.gallery[5], alt: 'Bel Aspect Hotel Restaurant Kinshasa', category: 'Ambiance' },
+  { src: belImages.gallery[6], alt: 'Bel Aspect Lounge', category: 'Lounge' },
+  { src: belImages.gallery[7], alt: 'Bel Aspect Restaurant', category: 'Sorties' },
 ]
 
 export default function Gallery() {

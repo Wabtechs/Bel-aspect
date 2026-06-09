@@ -44,8 +44,8 @@ export default function About() {
                   className="overflow-hidden rounded-2xl"
                 >
                   <img
-                    src={belImages.main}
-                    alt="Logo officiel Bel Aspect Hotel Restaurant"
+                    src={belImages.about[0]}
+                    alt="Bel Aspect Hotel Restaurant - Accueil"
                     className="h-48 w-full object-cover transition-transform duration-700 hover:scale-110"
                     loading="lazy"
                     width={640}
@@ -59,7 +59,7 @@ export default function About() {
                   className="overflow-hidden rounded-2xl"
                 >
                   <img
-                    src={belImages.second}
+                    src={belImages.about[1]}
                     alt="Bel Aspect Hotel Restaurant Kinshasa"
                     className="h-64 w-full object-cover transition-transform duration-700 hover:scale-110"
                     loading="lazy"
@@ -76,7 +76,7 @@ export default function About() {
                   className="overflow-hidden rounded-2xl"
                 >
                   <img
-                    src={belImages.second}
+                    src={belImages.about[2]}
                     alt="Identité Bel Aspect à Kinshasa"
                     className="h-64 w-full object-cover transition-transform duration-700 hover:scale-110"
                     loading="lazy"
@@ -91,7 +91,7 @@ export default function About() {
                   className="overflow-hidden rounded-2xl"
                 >
                   <img
-                    src={belImages.main}
+                    src={belImages.about[3]}
                     alt="Bel Aspect Hotel Restaurant Lounge"
                     className="h-48 w-full object-cover transition-transform duration-700 hover:scale-110"
                     loading="lazy"

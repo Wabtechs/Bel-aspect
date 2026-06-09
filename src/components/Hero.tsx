@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src={belImages.main}
+          src={belImages.hero}
           alt="Bel Aspect Hotel Restaurant à Kalamu"
           className="h-full w-full object-cover"
           width={1280}

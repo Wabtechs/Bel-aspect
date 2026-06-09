@@ -11,7 +11,7 @@ export default function Lounge() {
     <section id="lounge" className="relative min-h-screen overflow-hidden py-24 lg:py-32">
       <div className="absolute inset-0">
         <img
-          src={belImages.main}
+          src={belImages.lounge[0]}
           alt="Ambiance Bel Aspect Lounge Bar"
           className="h-full w-full object-cover"
           loading="lazy"
@@ -123,7 +123,7 @@ export default function Lounge() {
 
               <div className="relative h-80 w-80 overflow-hidden rounded-full border-2 border-[var(--gold)]/30 lg:h-96 lg:w-96">
                 <img
-                  src={belImages.second}
+                  src={belImages.lounge[1]}
                   alt="Bel Aspect Lounge Bar Kinshasa"
                   className="h-full w-full object-cover"
                   loading="lazy"

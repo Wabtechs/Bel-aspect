@@ -9,21 +9,21 @@ const testimonials = [
     role: 'Séjour à Kalamu',
     content: 'Une adresse pratique pour se reposer à Kinshasa, avec une équipe disponible et un bon rapport qualité-prix.',
     rating: 5,
-    image: belImages.main,
+    image: belImages.testimonials[0],
   },
   {
     name: 'Client restaurant',
     role: 'Repas entre proches',
     content: 'Le restaurant est agréable pour partager un repas et prolonger la soirée dans une ambiance détendue.',
     rating: 5,
-    image: belImages.second,
+    image: belImages.testimonials[1],
   },
   {
     name: 'Client lounge',
     role: 'Sortie week-end',
     content: 'Le lounge bar donne une vraie énergie au lieu, idéal pour boire un verre et profiter de Kalamu.',
     rating: 5,
-    image: belImages.main,
+    image: belImages.testimonials[2],
   },
 ]
 
